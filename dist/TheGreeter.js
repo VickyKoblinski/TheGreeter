@@ -1,4 +1,4 @@
-(function (global, $) {
+; (function (global, $) {
 
   /**
    * Creates a new TheGreeter object
