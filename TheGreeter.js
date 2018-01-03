@@ -53,7 +53,21 @@
         console.log(msg);
       }
 
-      //Allows for chainability
+      //Makes the method chainable
+      return this;
+    },
+
+    log: function () {
+      if (console) {
+        console.log(`${logMessages[this.lang]}: ${this.fullName()}`)
+      }
+
+      return this;
+    },
+
+    setLang: function (lang = 'en') {
+      this.lang = lang;
+      this.validate();
       return this;
     }
   };
