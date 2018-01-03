@@ -1,3 +1,6 @@
 const g = G('Joe', 'Bowman');
 
-console.log(g);
+$('#login').click(function () {
+  var lang = $('#lang').val();
+  $('#greet').text(JSON.stringify(g.setLang(lang).greet()));
+});
