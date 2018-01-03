@@ -1,0 +1,22 @@
+{
+  "name": "the-greeter-library",
+  "version": "0.0.1",
+  "description": "A library for greeting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "library",
+    "framework",
+    "greet",
+    "greeting",
+    "language"
+  ],
+  "author": "Vicky Koblinski",
+  "license": "ISC"
+}
