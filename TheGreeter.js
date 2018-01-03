@@ -69,6 +69,26 @@
       this.lang = lang;
       this.validate();
       return this;
+    },
+
+    $Greet: function (element, morning) {
+      if (!$) {
+        throw 'jQuery not found';
+      }
+      if (!element) {
+        throw 'Missing jQuery selector';
+      }
+
+      let msg = this.greeting();
+
+      if (morning) {
+        msg = this.morningGreeting();
+      }
+
+      $(element).html(msg);
+
+      return this;
+
     }
   };
 
