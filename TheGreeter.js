@@ -4,6 +4,18 @@
     return new TheGreeter.init(fname, lname, lang);
   }
 
+  const supportedLangs = ['en', 'jp'];
+
+  const defaultGreetings = {
+    en: 'Hello',
+    jp: 'Konnichiwa'
+  };
+
+  const morningGreetings = {
+    en: 'Good morning',
+    jp: 'Ohayō'
+  };
+
   TheGreeter.prototype = {};
 
   TheGreeter.init = function (fname, lname, lang) {
