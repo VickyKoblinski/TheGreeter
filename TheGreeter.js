@@ -39,8 +39,23 @@
 
     morningGreeting: function () {
       return `${morningGreetings[this.lang]} ${this.fname}.`;
-    }
+    },
 
+    greet: function (isMorning) {
+      let msg = this.greeting();
+
+      if (isMorning) {
+        msg = this.morningGreeting();
+      }
+
+      //Log message
+      if (console) {
+        console.log(msg);
+      }
+
+      //Allows for chainability
+      return this;
+    }
   };
 
   TheGreeter.init = function (fname, lname, lang) {
