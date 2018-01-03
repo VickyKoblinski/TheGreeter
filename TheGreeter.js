@@ -16,7 +16,32 @@
     jp: 'Ohayō'
   };
 
-  TheGreeter.prototype = {};
+  const logMessages = {
+    en: 'Logged in',
+    jp: 'Roguin shita'
+  };
+
+  TheGreeter.prototype = {
+
+    fullName: function () {
+      return `${this.fname} ${this.lname}`;
+    },
+
+    validate: function () {
+      if (supportedLangs.indexOf(this.lang) === -1) {
+        throw "Invalid language";
+      }
+    },
+
+    greeting: function () {
+      return `${defaultGreetings[this.lang]} ${this.fname}!`;
+    },
+
+    morningGreeting: function () {
+      return `${morningGreetings[this.lang]} ${this.fname}.`;
+    }
+
+  };
 
   TheGreeter.init = function (fname, lname, lang) {
     this.fname = fname || "Unknown";
